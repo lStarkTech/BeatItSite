@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beat It - Music Player</title>
+  
+  <!-- Font carino e arrotondato in stile retro/cute -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Audio Element (Sostituisci "beat-it.mp3" con il tuo file audio) -->
+  <audio id="audio" src="files/Beat_It.mp3"></audio>
+
+  <div class="player-window">
+    <!-- Header Finestra -->
+    <div class="window-bar">
+      <span>Beat It</span>
+      <div class="window-controls">
+        <span class="btn-minimize">—</span>
+        <span class="btn-close">✕</span>
+      </div>
+    </div>
+
+    <!-- Contenuto -->
+    <div class="player-body">
+      <!-- Intestazione con Pikachu e Nome -->
+        <img src="files/pikagif.gif" class="pika-sticker">
+
+
+      <!-- Vinile -->
+      <div class="vinyl-wrapper">
+        <div class="vinyl" id="vinyl"></div>
+      </div>
+      <!-- Barra di Scorrimento -->
+      <div class="progress-container">
+        <input type="range" class="progress-bar" id="progress" value="0" min="0" max="100">
+      </div>
+
+      <!-- Controlli Audio -->
+      <div class="controls">
+        <!-- Prev Button -->
+        <button class="control-btn" id="prevBtn" title="Ricomincia">
+          <svg width="30" height="30" viewBox="0 0 24 24">
+            <path d="M11 18V6l-8.5 6 8.5 6zm.5-6l8.5 6V6l-8.5 6z"/>
+          </svg>
+        </button>
+
+        <!-- Play/Pause Button -->
+        <button class="control-btn" id="playBtn" title="Play/Pausa">
+          <svg id="playIcon" width="38" height="38" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </button>
+
+        <!-- Next Button -->
+        <button class="control-btn" id="nextBtn" title="Avanti">
+          <svg width="30" height="30" viewBox="0 0 24 24">
+            <path d="M4 18l8.5-6L4 6v12zm9-12v12l8.5-6L13 6z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
